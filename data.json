@@ -1,0 +1,82 @@
+[
+  { 
+    "year": "2010", 
+    "elettrodomestici": "154", 
+    "vestiti": "62",
+    "prodottiTecnologici": "90",
+    "ProdottiCuraPersonale": "162",
+    "libri" : "40"
+  },
+  {
+    "year": "2011",
+    "elettrodomestici": "102",
+    "vestiti": "134",
+    "prodottiTecnologici": "99", 
+    "ProdottiCuraPersonale": "143",
+    "libri" : "80"
+  },
+  {
+    "year": "2012",
+    "elettrodomestici": "50", 
+    "vestiti": "201", 
+    "prodottiTecnologici": "127", 
+    "ProdottiCuraPersonale": "114",
+    "libri" : "10"
+  },
+  { 
+    "year": "2013",
+    "elettrodomestici": "150",
+    "vestiti": "114", 
+    "prodottiTecnologici": "129",
+    "ProdottiCuraPersonale": "80",
+    "libri" : "60" 
+  },
+  { 
+    "year": "2014",
+    "elettrodomestici": "59",
+    "vestiti": "125",
+    "prodottiTecnologici": "129",
+    "ProdottiCuraPersonale": "194",
+    "libri" : "45"
+  },
+  { 
+    "year": "2015",
+    "elettrodomestici": "50", 
+    "vestiti": "160", 
+    "prodottiTecnologici": "117", 
+    "ProdottiCuraPersonale": "114",
+    "libri" : "55"
+  },
+  { 
+    "year": "2016", 
+    "elettrodomestici": "130",
+    "vestiti": "134", 
+    "prodottiTecnologici": "139",
+    "ProdottiCuraPersonale": "80",
+    "libri" : "90"
+  },
+  { 
+    "year": "2017", 
+    "elettrodomestici": "59", 
+    "vestiti": "105",
+    "prodottiTecnologici": "129",
+    "ProdottiCuraPersonale": "154",
+    "libri" : "110"
+  },
+  { 
+    "year": "2018", 
+    "elettrodomestici": "50", 
+    "vestiti": "201", 
+    "prodottiTecnologici": "127", 
+    "ProdottiCuraPersonale": "114",
+    "libri" : "100" 
+  },
+  { 
+    "year": "2019", 
+    "elettrodomestici": "130", 
+    "vestiti": "134", 
+    "prodottiTecnologici": "139", 
+    "ProdottiCuraPersonale": "50",
+    "libri" : "130"
+  }
+]
