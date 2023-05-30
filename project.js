@@ -11,7 +11,7 @@
     
     d3.json("data.json", function(error, data) {
     if (error) {
-      console.log(error); // Gestione degli errori
+      console.log(error); 
       return;
     }
 
@@ -23,7 +23,7 @@
       });
     }));
     
-    // Step 3
+   
     var xScale = d3.scale.ordinal()
       .domain(dataset[0].map(function(d) { return d.x; }))
       .rangeRoundBands([0, width], 0.5);
@@ -33,7 +33,7 @@
       .range([height, 0]);
     
     
-    // Step 4
+   
     var yAxis = d3.svg.axis()
       .scale(yScale)
       .orient("left")
@@ -55,7 +55,7 @@
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
     
-    // Step 5
+   
     // X label
     svg.append('text')
         .attr('x', width/2)
@@ -73,7 +73,7 @@
         .style('font-size', 12)
         .text('Sale');
     
-    // Step 6
+   
     var selectedGroup = null;
     var groups = svg.selectAll("g.bars")
       .data(dataset)
@@ -84,32 +84,33 @@
 
       var rect = groups.selectAll("rect")
       .data(function(d) { 
-    return d.map(function(dataPoint) {
-      // Aggiungi lastDelta con valore predefinito di 0
+      return d.map(function(dataPoint) {
+      
       dataPoint.lastDelta = 0;
       return dataPoint;
     });
-  })
-  .enter()
-  .append("rect")
-  .attr("x", function(d) { return xScale(d.x); })
-  .attr("y", function(d) { return yScale(d.y0 + d.y); })
-  .attr("height", function(d) { return yScale(d.y0) - yScale(d.y0 + d.y); })
-  .attr("width", xScale.rangeBand())
-  .attr("lastDelta", function(d) { return 0; })
-  .on('click', function(d, i) {
+    })
+    .enter()
+    .append("rect")
+    .attr("x", function(d) { return xScale(d.x); })
+    .attr("y", function(d) { return yScale(d.y0 + d.y); })
+    .attr("height", function(d) { return yScale(d.y0) - yScale(d.y0 + d.y); })
+    .attr("width", xScale.rangeBand())
+    .attr("lastDelta", function(d) { return 0; })
+    .on('click', function(d, i) {
     var selectedRect = d3.select(this);
-    var delta = yScale(0) - yScale(d.y0); // Calcola l'altezza di spostamento
-    // Sposta la barra selezionata e le altre nella stessa fascia
+    var delta = yScale(0) - yScale(d.y0); 
+
+   
     groups.selectAll("rect")
       .transition()
       .duration(500)
       .attr("y", function(d) {
         if (d.x.getTime() === selectedRect.data()[0].x.getTime()) {
           d.lastDelta=delta;
-          return yScale(d.y0 + d.y) + delta; // Sposta solo la barra selezionata
+          return yScale(d.y0 + d.y) + delta; 
         } else {
-          return yScale(d.y0 + d.y) + d.lastDelta; // Mantieni la posizione delle altre barre
+          return yScale(d.y0 + d.y) + d.lastDelta; 
         }
       });
 
