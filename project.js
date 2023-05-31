@@ -23,6 +23,7 @@ d3.json("data.json", function(error, data) {
     });
   }));
 
+  
   var labels = ["elettrodomestici", "vestiti", "prodottiTecnologici", "ProdottiCuraPersonale", "libri"];
 
   var xScale = d3.scale.ordinal()
